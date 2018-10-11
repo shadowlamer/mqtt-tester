@@ -1,0 +1,19 @@
+{
+  "name": "mqtt-tester",
+  "version": "0.0.1",
+  "description": "Generates mqtt messages for load-testing purposes",
+  "repository": "https://github.com/shadowlamer/mqtt-tester",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Vadim Cherenev <sl@anhot.ru>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "minimist": "^1.2.0",
+    "moment": "^2.22.2",
+    "mqtt": "^2.18.8"
+  }
+}

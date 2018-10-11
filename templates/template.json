@@ -1,0 +1,22 @@
+{
+    "init": "timestamp=moment().format('X');filter=10;avg=0",
+    "generators":[
+        {
+            "topic": "dev=Math.round(Math.random()*10);a='devices/dev'+dev+'/info'",
+            "message": {
+                "timestamp": "timestamp=+timestamp+Math.round(Math.random()*600)+1",
+                "value":"val=Math.random()*100"
+            },
+            "interval":1000
+        },
+        {
+            "topic": "'devices/dev'+dev+'/status'",
+            "message": {
+                "timestamp":"timestamp",
+                "avg":"avg=(val+(avg*(filter-1)))/filter",
+                "status":"0"
+            },
+            "interval":1000
+        }
+    ]
+}
